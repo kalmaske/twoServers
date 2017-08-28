@@ -7,16 +7,18 @@
 // Look for other ways to expand what your server can do. As possibilities:
 // Generate the good/bad phrase randomly from a list of predefined phrases
 // Use the twitter package inside the response to also return a random tweet
-//===========================================
+//===============================================================================================
 
 // We require/import the HTTP module
 var http = require("http");
 
+//===============================================================================================
 
 // Then define the ports we want to listen to
 var PORT1 = 7000;
 var PORT2 = 7500;
 
+//===============================================================================================
 
 // We need two different functions to handle requests, one for each server.
 function handleRequestGood(request, response){
@@ -27,11 +29,13 @@ function handleRequestBad(request, response){
     response.end("You are lazy!!!" + request.url);
 }
 
+//===============================================================================================
 
 // Create our servers
 var serverGood = http.createServer(handleRequestGood);
 var serverBad = http.createServer(handleRequestBad);
 
+//===============================================================================================
 
 // Starting our servers
 serverGood.listen(PORT1, function(){
@@ -39,7 +43,6 @@ serverGood.listen(PORT1, function(){
     console.log("Server listening on: http://localhost:%s", PORT1);
     
 });
-
 
 
 serverBad.listen(PORT2, function() {
