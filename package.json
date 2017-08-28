@@ -1,0 +1,11 @@
+{
+  "name": "twoservers",
+  "version": "1.0.0",
+  "description": "creating two servers",
+  "main": "twoServers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khadija Almaskeen",
+  "license": "ISC"
+}
